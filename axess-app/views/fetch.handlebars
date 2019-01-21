@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getfile</title>
+</head>
+<body>
+    <h3 class="text-muted">Get-file</h3><br>
+   
+    {{#if get}}
+        <div class="alert alert-success">File fetched successfully</div> 
+    {{/if}}
+
+   <form method="post" action="/users/fetch">
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Your Account Id" name="id">
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Name of file in your account" name="file">
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Name of file to be saved with" name="Name">
+   </div>
+   <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</body>
+</html>

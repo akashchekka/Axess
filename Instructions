@@ -1,0 +1,8 @@
+-> This is build on hyerledger fabric.
+-> A partucular user can have anu number of IDs in his account. Each ID can have any number of files. For example IDs can be home, office etc.
+-> A user can register and his credentials are stored in mongoDB.
+-> src folder contains all the basic javascript scripts.
+-> chaincode contains smart contract.
+-> basic-network contains the network configuration.
+-> axess-app is the express application providing GUI for the application.
+-> You can make necessary changes to the files in the way you want. 

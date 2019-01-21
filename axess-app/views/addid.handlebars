@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add ID</title>
+</head>
+<body>
+    <h3 class="text-muted">Add-ID</h3><br>
+   
+    {{#if ok}}
+        <div class="alert alert-success">ID added successfully</div> 
+    {{/if}}
+
+   <form method="post" action="/users/addid">
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Id Name" name="id">
+   </div>
+   <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</body>
+</html>

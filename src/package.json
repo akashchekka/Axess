@@ -1,0 +1,19 @@
+{
+  "name": "axess",
+  "version": "1.0.0",
+  "description": "File transfer system on hyperledger fabric",
+  "main": "registerAdmin.js",
+  "scripts": {
+    "test": "node registerAdmin.js"
+  },
+  "author": "Akash",
+  "license": "ISC",
+  "dependencies": {
+    "fabric-ca-client": "^1.3.0",
+    "fabric-client": "^1.3.0",
+    "ipfs-http-client": "^28.1.1",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "util": "^0.11.1"
+  }
+}

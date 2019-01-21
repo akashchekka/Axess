@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Axess-app</title>
+	<link rel="stylesheet" href="/css/bootstrap.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <h2 class="text-muted" style="text-align:center; font-size: 0.5in">Axess</h2><br>
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            {{#if user}}
+              <li style="font-size: 0.15in" role="presentation"><a href="/">Dashboard</a></li>
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/addid">AddId</a></li>
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/upload">Upload</a></li>
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/transfer">Transfer</a></li>
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/fetch">Fetch</a></li>
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/login">Login</a></li>
+              <li style="font-size: 0.15in" role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p style="font-size: 0.2in">&copy; 2018 Axess</p>
+      </footer>
+
+    </div>
+</body>
+</html>
