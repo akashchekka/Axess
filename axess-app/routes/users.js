@@ -11,7 +11,7 @@ var path = require('path');
 var util = require('util');
 var os = require('os');
 var sgmail = require('@sendgrid/mail');
-sgmail.setApiKey("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");
+sgmail.setApiKey("enter your sendgrid api key");
 var ipfsAPI = require('ipfs-http-client');
 var ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'});
 
