@@ -404,7 +404,7 @@ router.post('/transfer', function(req, res) {
 router.post('/upload', function(req, res) {
 	var id = req.body.id;
 	var nme = req.body.nme;
-	var path = req.body.path;
+	var path1 = req.body.path;
 
 	req.checkBody('id', 'Your ID is required').notEmpty();
 	req.checkBody('nme', 'Name is required').notEmpty();
@@ -430,7 +430,7 @@ router.post('/upload', function(req, res) {
 		console.log('Store path:'+store_path);
 		var tx_id = null;
 
-		ipfs.addFromFs(path, {recursive: true}, (err, res) => {
+		ipfs.addFromFs(path1, {recursive: true}, (err, res) => {
 			if (err) {throw err;}
 			console.log(res[(res.length)-1].hash + " is the hash of your file");
 		
