@@ -181,7 +181,6 @@ router.post('/fetch', function(req, res) {
 				throw new Error('Failed to get user1.... run registerUser.js');
 			}
 
-			// queryTuna - requires 1 argument, ex: args: ['4'],
 			const request = {
 				chaincodeId: 'axess',
 				txId: tx_id,
@@ -460,9 +459,7 @@ router.post('/upload', function(req, res) {
 				// get a transaction id object based on the current user assigned to fabric client
 				tx_id = fabric_client.newTransactionID();
 				console.log("Assigning transaction_id: ", tx_id._transaction_id);
-			
-				// recordTuna - requires 5 args, ID, vessel, location, timestamp,holder - ex: args: ['10', 'Hound', '-12.021, 28.012', '1504054225', 'Hansel'], 
-				// send proposal to endorser
+
 				const request = {
 					//targets : --- letting this default to the peers assigned to the channel
 					chaincodeId: 'axess',
